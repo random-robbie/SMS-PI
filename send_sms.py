@@ -28,9 +28,10 @@ message = sys.argv[2]
 
 values = {
           'message' : message,
-          'number'    : number}
+          'number'    : number,
+          'hash' : "xxxxxxxxxxxxxxxxxxxxxxxxxx"} # Grab your hash from http://www.rwsupport.info
 
-url = 'http://sms.streetunity.org'
+url = 'http://www.rwsupport.info/send/'
 
 postdata = urllib.urlencode(values)
 req = urllib2.Request(url, postdata)
