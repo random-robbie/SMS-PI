@@ -3,7 +3,7 @@
 # Send SMS Text Message
 #
 # Author : Robert Wiggins
-# Site   : http://www.rwsupport.info
+# Site   : http://www.smspi.co.uk
 # Date   : 01/10/2013
 #
 # Altered Script from Matt Hawkins of http://www.raspberrypi-spy.co.uk/
