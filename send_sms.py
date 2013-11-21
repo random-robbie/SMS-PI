@@ -31,7 +31,7 @@ values = {
           'number'    : number,
           'hash' : "xxxxxxxxxxxxxxxxxxxxxxxxxx"} # Grab your hash from http://www.rwsupport.info
 
-url = 'http://www.rwsupport.info/send/'
+url = 'http://www.smspi.co.uk/send/'
 
 postdata = urllib.urlencode(values)
 req = urllib2.Request(url, postdata)
