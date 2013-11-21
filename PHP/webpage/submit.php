@@ -3,7 +3,7 @@
 ( isset ( $_POST['submit'] ) ) 
 $message = $_POST['message']; 
 $number = $_POST['number']; 
-$hash ="9aba4cf9c622c789460e52f11901af74"; 
+$hash ="YOUR HASH"; 
 //set POST variables 
 $url = 'http://www.smspi.co.uk/send/'; 
 $fields = array('to' => ($number), 'message' => ($message), 'hash' => ($hash) ); 
