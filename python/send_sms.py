@@ -42,9 +42,7 @@ try:
   response = urllib2.urlopen(req)
   response_url = response.geturl()
   if response_url==url:
-    print 'SMS sent!'
-    print message
-    print number
+    print response.read()
 except urllib2.URLError, e:
   print 'Send failed!'
   print e.reason
