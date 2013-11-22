@@ -18,8 +18,9 @@ import sys		   # System Function
 
 # Arguments Taken from command line
 
-number = sys.argv[1]
+to = sys.argv[1]
 message = sys.argv[2]
+has = "YOURHASH"
 
 
 #-----------------------------------
@@ -27,9 +28,9 @@ message = sys.argv[2]
 #-----------------------------------
 
 values = {
-          'message' : message,
+          'to' : to,
           'number'    : number,
-          'hash' : "xxxxxxxxxxxxxxxxxxxxxxxxxx"} # Grab your hash from http://www.rwsupport.info
+          'hash' : hash } # Grab your hash from http://www.smspi.co.uk
 
 url = 'http://www.smspi.co.uk/send/'
 
