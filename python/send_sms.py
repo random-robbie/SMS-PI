@@ -20,7 +20,7 @@ import sys		   # System Function
 
 to = sys.argv[1]
 message = sys.argv[2]
-has = "YOURHASH"
+hash = "YOURHASH"
 
 
 #-----------------------------------
@@ -29,7 +29,7 @@ has = "YOURHASH"
 
 values = {
           'to' : to,
-          'number'    : number,
+          'message' : message,
           'hash' : hash } # Grab your hash from http://www.smspi.co.uk
 
 url = 'http://www.smspi.co.uk/send/'
