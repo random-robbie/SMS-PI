@@ -2,7 +2,6 @@
 // SMS your IP using SMSPI
 // By Robert Wiggins
 
-
 // Change the Port to either wlan0 or eth0 to suit your needs
 $port = "eth0";
 // Number you wish to text when you want this to send a SMS
