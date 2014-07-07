@@ -1,6 +1,6 @@
 <?php
 
-if (empty($_GET)) {
+if (empty($_REQUEST)) {
     echo "Please All Details In To the Form.";
 }
 $name = $_REQUEST['name'];
