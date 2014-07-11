@@ -38,6 +38,6 @@ $hash = "";
 
 
 ```
-Go to your textlocal account and point the incoming sms to your scripts location and then it will text you back the next train time!
+Go to your smspi account and point the incoming sms to your scripts location and then it will text you back the next train time!
 
 Also do not forget to import trains.sql so that the mysql table can be created
