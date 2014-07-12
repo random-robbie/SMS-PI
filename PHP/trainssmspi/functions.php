@@ -91,7 +91,7 @@ function nexttrain()
 		GLOBAL $dbh;
 		GLOBAL $station;
 		GLOBAL $dbtable;
-        $nexttrain = $dbh->prepare("SELECT * FROM ".$dbtable." WHERE `due` > CURRENT_TIME LIMIT 0 , 1 ");
+        $nexttrain = $dbh->prepare("SELECT * FROM `".$dbtable."` WHERE `due` > CURRENT_TIME ORDER BY `Due` ASC LIMIT 0 , 1 ");
 		$nexttrain->execute();
 		$result = $nexttrain->fetch(PDO::FETCH_ASSOC);
 		$iflate = $result['Status'];
