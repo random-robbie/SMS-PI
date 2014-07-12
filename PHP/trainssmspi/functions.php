@@ -23,7 +23,7 @@ curl_setopt($ch,CURLOPT_URL, $url);
 curl_setopt($ch,CURLOPT_USERAGENT,'SMSPI PHP Trains');
 curl_setopt($ch,CURLOPT_POST, count($fields));
 curl_setopt($ch,CURLOPT_POSTFIELDS, $fields);
-
+echo "<br><br>";
 //execute post
 $result = curl_exec($ch);
 
