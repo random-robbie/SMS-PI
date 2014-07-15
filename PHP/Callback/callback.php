@@ -4,7 +4,7 @@ if (empty($_REQUEST)) {
     echo "Please All Details In To the Form.";
 }
 $name = $_REQUEST['name'];
-$number = $_REQUEST['number'];
+$number2 = $_REQUEST['number'];
 
 // Number you wish to text when you want this to send a SMS
 $number = "077777777";
@@ -14,7 +14,7 @@ $hash = "YOURSMSPIHASH";
 $webpage = "example.com"
 
 //Message
-$message = "Please call ".$name." Back On ".$number." Sent Via ".$webpage."";
+$message = "Please call ".$name." Back On ".$number2." Sent Via ".$webpage."";
 
 
 //set POST variables
