@@ -46,6 +46,7 @@ src="//pagead2.googlesyndication.com/pagead/show_ads.js">
 		  <br>
 		  Message:  <input name="message" type="text" maxlength="160" data-mini="true" value="Your Message" />
 		  <br>
+		  Flash: <input type="checkbox" name="flash" value="yes"> 
 		  <br>
 		  <div>
          <input name="submit" data-role="button" data-inline="true" type="submit" value="submit" /></form><a href="#admin" class="back"><button data-inline="true">back</button></a><br>
