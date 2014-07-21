@@ -21,6 +21,8 @@ import sys		   # System Function
 to = sys.argv[1]
 message = sys.argv[2]
 hash = "YOURHASH"
+### Set to Yes if you wish to send a flash (class 0) message
+FLASH = "NO"
 
 
 #-----------------------------------
@@ -30,7 +32,9 @@ hash = "YOURHASH"
 values = {
           'to' : to,
           'message' : message,
-          'hash' : hash } # Grab your hash from http://www.smspi.co.uk
+          'hash' : hash,
+          'flash' : FLASH} 
+          # Grab your hash from http://www.smspi.co.uk
 
 url = 'http://www.smspi.co.uk/send/'
 
