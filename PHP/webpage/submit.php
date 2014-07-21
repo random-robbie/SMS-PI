@@ -1,12 +1,19 @@
 <?php 
 //If submit is hit if 
 ( isset ( $_POST['submit'] ) ) 
+
 $message = $_POST['message']; 
-$number = $_POST['number']; 
-$hash ="YOUR HASH"; 
+$number = $_POST['number'];
+$flash = $_POST['flash'];
+$hash ="YOUR HASH";
+
+if (!isset($flash) || empty($flash))
+{
+    $flash = "no";
+}
 //set POST variables 
 $url = 'http://www.smspi.co.uk/send/'; 
-$fields = array('to' => ($number), 'message' => ($message), 'hash' => ($hash) ); 
+$fields = array('to' => ($number), 'message' => ($message), 'hash' => ($hash), 'flash' => ($flash) ); 
 //open connection 
 $ch = curl_init(); 
 //set the url, number of POST vars, POST data 
