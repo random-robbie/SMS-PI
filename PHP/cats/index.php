@@ -1,19 +1,23 @@
 <?php
-#################################
-
-
+include ('config.php');
 $number = $_REQUEST['from'];
 
-//Tag you are looking for
-$tags = "#kitten,#cute kitten,#cats,#kitty";
-//Flickr API Key
-$apikey = "0e2b6aaf8a6901c264acb91f151a3350";
-//Data sorted by options are  date-posted-asc, date-posted-desc, date-taken-asc, date-taken-desc, interestingness-desc, interestingness-asc, and relevance
-$sort = "interestingness-desc";
-//url_sq, url_t, url_s, url_q, url_m, url_n, url_z, url_c, url_l, url_o
-$extras = "url_m";
-// Format
-$format = "json";
+function insert2db ($url)
+{
+GLOBAL $pdo;
+$stmt = $pdo->prepare("INSERT INTO `cats` (`url`) VALUES (:url)");
+$stmt->bindValue(':url', $url);
+$stmt->execute();
+
+}
+function removecat ($url)
+{
+GLOBAL $pdo;
+//remove from DB
+$del = $pdo->prepare('DELETE FROM `cats` WHERE `url` = :url');
+$del->bindValue(':url', $url);
+$del->execute();
+}
 
 function results ()
 {
@@ -22,9 +26,10 @@ GLOBAL $apikey;
 GLOBAL $sort;
 GLOBAL $extras;
 GLOBAL $format;
+GLOBAL $perpage;
 //set POST variables 
 $url = 'https://api.flickr.com/services/rest/'; 
-$fields = array('format' => ($format), 'sort' => ($sort), 'method' => ('flickr.photos.search'), 'tags' => ($tags), 'tag_mode' => ('all'), 'api_key' => ($apikey), 'nojsoncallback' => ('1'), 'per_page' => ('1'), 'extras' => ($extras) ); 
+$fields = array('format' => ($format), 'sort' => ($sort), 'method' => ('flickr.photos.search'), 'tags' => ($tags), 'tag_mode' => ('all'), 'api_key' => ($apikey), 'nojsoncallback' => ('1'), 'per_page' => ($perpage), 'extras' => ($extras) ); 
 //open connection 
 $ch = curl_init(); 
 //set the url, number of POST vars, POST data 
@@ -45,8 +50,8 @@ return $result;
 function shortURL($link) {
 	
 	$format = "json";
-	$login = "@smspiuk";
-	$apiKey = "YOU BIT.LT ACCESS TOKEN";
+	GLOBAL $login;
+	GLOBAL $apiKey;
 	
  
 	$bitly = 'https://api-ssl.bitly.com/v3/shorten?login='.$login.'&access_token='.$apiKey.'&longUrl='.urldecode($link).'&format='.$format;
@@ -66,7 +71,7 @@ function shortURL($link) {
 }
 function sendsms ($number,$message)
 {
-$hash = "YOUR SMSPI HASH";
+GLOBAL $hash;
 
 
 
@@ -85,12 +90,15 @@ $ch = curl_init();
 
 //set the url, number of POST vars, POST data
 curl_setopt($ch,CURLOPT_URL, $url);
-curl_setopt($ch,CURLOPT_USERAGENT,'SMSPI PHP IP');
+curl_setopt($ch,CURLOPT_USERAGENT,'SMSPI CATS');
 curl_setopt($ch,CURLOPT_POST, count($fields));
 curl_setopt($ch,CURLOPT_POSTFIELDS, $fields);
 
 //execute post
 $result = curl_exec($ch);
+
+
+
 
 //close connection
 curl_close($ch);
@@ -99,32 +107,38 @@ curl_close($ch);
 echo $result;
 }
 
-if ($number == "test")
+
+$sel = $pdo->prepare('SELECT * FROM `cats`');
+$sel->execute();
+$count = $sel->rowCount();
+
+//Restock DB if only one result letft.
+if ($count == "0")
 {
 $me  = results();
 $flickr = json_decode($me, TRUE);
 foreach ($flickr['photos']['photo'] as $photo) {
-$cat = $photo['url_m'];
-echo "<br><br>";
-echo $cat;
-exit();
-}
-}
-
-
-$me  = results();
-$flickr = json_decode($me, TRUE);
-foreach ($flickr['photos']['photo'] as $photo) {
  $cat = $photo['url_m'];
-$link = shortURL ($cat);
-echo "<br><br>";
-$message = "Hello Cat Lady - here is today's Cat Picture ".$link."";
-echo $message;
-echo "<br><br>";
-sendsms ($number,$message);
-echo "<br><br>";
+ insert2db ($cat);
 }	
+}
 
+//Select Flickr url
+$getcat = $pdo->prepare('SELECT * FROM  `cats` LIMIT 0 , 1');
+$getcat->execute();
+$result = $getcat->fetch(PDO::FETCH_ASSOC);
+$caturl = $result['url'];
+//Convert to biy.ly
+$newurl = shortURL($caturl);
+//Send SMS
+$message = "Hello Cat Lady - here is today's Cat Picture ".$newurl."";
+echo $message;
+if ($number != "test")
+{
+sendsms ($number,$message);
+}
+//Remove flickr url
+removecat ($caturl);
 
 
 ?>
