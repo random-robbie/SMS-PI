@@ -12,7 +12,7 @@ my $ua = LWP::UserAgent->new();
  
 my $res = $ua->request
 (
- POST 'http://www.smspi.co.uk/send/',
+ POST 'http://www.smspi.co.uk/api/send.php',
  Content_Type  => 'application/x-www-form-urlencoded',
  Content       => [ 'to'       => $to,
                     'message'    => $message,
