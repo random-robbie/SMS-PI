@@ -3,7 +3,7 @@ import urllib
   
 def sendSMS(to, message, hash):
     params = urllib.urlencode({'to': to, 'message' : message, 'hash': hash})
-    f = urllib.urlopen('http://www.smspi.co.uk/send/', params)
+    f = urllib.urlopen('http://www.smspi.co.uk/api/send.php', params)
     return (f.read(), f.code)
   
 resp, code = sendSMS('07733665594', 'send via www.smspi.co.uk', 'HASH')
