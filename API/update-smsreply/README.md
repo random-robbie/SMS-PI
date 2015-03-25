@@ -1,13 +1,21 @@
 SMS-PI
 ======
 
-SMS PI - Send a SMS via Your Raspberry PI
-
-FREE SMS IN THE UK
+Update smsreply will tell the system you want to have your incoming sms replyed with the sms reply you are providing.
 
 
-All the Scripts here will require you to enter your hash in so that it sends.
+All is returned in Json
 
-go to http://www.smspi.co.uk and register to get your hash
+API url : http://www.smspi.co.uk/api/update-smsreply/
+Required Paramters: 
+hash
+smsreply
 
-if you have any scripts you wish to add let me know @smspiuk on twitter
+URL needs to start http or https otherwise it will fail to update.
+
+
+POST or GET to the URL passing your SMS pi hash will return:
+
+```
+[{"error":false,"message":"sms reply updated"}]
+```
