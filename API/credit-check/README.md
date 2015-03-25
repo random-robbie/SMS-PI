@@ -1,13 +1,15 @@
 SMS-PI
 ======
 
-SMS PI - Send a SMS via Your Raspberry PI
+Credit Check will return how many credits you have.
 
-FREE SMS IN THE UK
+All is returned in Json
 
+API url : http://www.smspi.co.uk/api/credit-check/
+Required Paramters: hash
 
-All the Scripts here will require you to enter your hash in so that it sends.
+POST or GET to the URL passing your SMS pi hash will return:
 
-go to http://www.smspi.co.uk and register to get your hash
-
-if you have any scripts you wish to add let me know @smspiuk on twitter
+```
+[{"error":false,"credits":"997"}]
+```
