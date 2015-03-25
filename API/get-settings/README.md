@@ -1,13 +1,20 @@
 SMS-PI
 ======
 
-SMS PI - Send a SMS via Your Raspberry PI
+Get Settings will return your incoming settings for sms
 
-FREE SMS IN THE UK
+SMS Reply - reply with a message when some one texts your keyword
+Email - Email's you the incoming SMS
+Post URL - will return the url you have set so when an incoming sms comes it it's then sent to the url provided
+Keyword - When you text back to SMSPI you need to put this keyword in so that the system knows the sms is for you.
 
+All is returned in Json
 
-All the Scripts here will require you to enter your hash in so that it sends.
+API url : http://www.smspi.co.uk/api/get-settings/
+Required Paramters: hash
 
-go to http://www.smspi.co.uk and register to get your hash
+POST or GET to the URL passing your SMS pi hash will return:
 
-if you have any scripts you wish to add let me know @smspiuk on twitter
+```
+[{"smsreply":"thisisa test","email":null,"posturl":"http:\/\/www.smspi.co.uk\/test\/","keyword":"ADSA2"}]
+```
