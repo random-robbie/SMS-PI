@@ -5,7 +5,7 @@ grab incoming messages will return all incoming messages to you.
 
 
 
-API url : http://www.smspi.co.uk/api/credit-check/
+API url : http://www.smspi.co.uk/api/get-message/
 Required Paramters: 
 hash
 
