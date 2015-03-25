@@ -1,13 +1,25 @@
 SMS-PI
 ======
 
-SMS PI - Send a SMS via Your Raspberry PI
+Update posturl will tell the system you want to have your incoming sms sent to the following url.
 
-FREE SMS IN THE UK
+Remember the system will send it as a post request and use the following
+
+from - number it was from
+message - the sms message
+
+All is returned in Json
+
+API url : http://www.smspi.co.uk/api/update-posturl/
+Required Paramters: 
+hash
+posturl
+
+URL needs to start http or https otherwise it will fail to update.
 
 
-All the Scripts here will require you to enter your hash in so that it sends.
+POST or GET to the URL passing your SMS pi hash will return:
 
-go to http://www.smspi.co.uk and register to get your hash
-
-if you have any scripts you wish to add let me know @smspiuk on twitter
+```
+[{"error":false,"message":"Post Url Address updated"}]
+```
