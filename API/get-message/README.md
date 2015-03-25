@@ -1,13 +1,21 @@
 SMS-PI
 ======
 
-SMS PI - Send a SMS via Your Raspberry PI
-
-FREE SMS IN THE UK
+grab incoming messages will return all incoming messages to you.
 
 
-All the Scripts here will require you to enter your hash in so that it sends.
 
-go to http://www.smspi.co.uk and register to get your hash
+API url : http://www.smspi.co.uk/api/credit-check/
+Required Paramters: 
+hash
 
-if you have any scripts you wish to add let me know @smspiuk on twitter
+Option parameter:
+results
+
+default results is 10 but you can do as many as you want either 1 - 100 etc
+
+POST or GET to the URL passing your SMS pi hash will return:
+
+```
+[{"from":"07777777777","message":"test","date":"2014-07-02 15:24:15"}]
+```
