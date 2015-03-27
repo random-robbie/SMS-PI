@@ -18,7 +18,7 @@ $message = "Please call ".$name." Back On ".$number2." Sent Via ".$webpage."";
 
 
 //set POST variables
-$url = 'http://www.smspi.co.uk/send/';
+$url = 'http://www.smspi.co.uk/api/';
 $fields = array(
 						'to' => $number,
 						'message' => $message,
