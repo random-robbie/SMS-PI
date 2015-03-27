@@ -36,7 +36,7 @@ values = {
           'flash' : FLASH} 
           # Grab your hash from http://www.smspi.co.uk
 
-url = 'http://www.smspi.co.uk/api/send.php'
+url = 'http://www.smspi.co.uk/api/'
 
 postdata = urllib.urlencode(values)
 req = urllib2.Request(url, postdata)
