@@ -15,7 +15,7 @@ $message = "Your Raspberry Pi IP for port ".$port." is ".$ip."";
 
 
 //set POST variables
-$url = 'http://www.smspi.co.uk/api/send.php';
+$url = 'http://www.smspi.co.uk/api/';
 $fields = array(
 						'to' => $number,
 						'message' => $message,
