@@ -12,7 +12,7 @@ if (!isset($flash) || empty($flash))
     $flash = "no";
 }
 //set POST variables 
-$url = 'http://www.smspi.co.uk/send/'; 
+$url = 'http://www.smspi.co.uk/api/'; 
 $fields = array('to' => ($number), 'message' => ($message), 'hash' => ($hash), 'flash' => ($flash) ); 
 //open connection 
 $ch = curl_init(); 
