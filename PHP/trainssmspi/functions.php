@@ -7,7 +7,7 @@ function sms ($sender2,$message)
 GLOBAL $hash;
 
                 //set POST variables
-$url = 'http://www.smspi.co.uk/send/';
+$url = 'http://www.smspi.co.uk/api/';
 $fields = array(
 						'to' => $sender2,
 						'message' => $message,
