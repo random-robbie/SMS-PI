@@ -6,11 +6,13 @@ get history will return messages you have sent.
 
 
 API url : http://www.smspi.co.uk/api/get-history/
+```
 Required Parameters: 
 hash
 
 Option parameter:
 results
+```
 
 default results is 10 but you can do as many as you want either 1 - 100 etc
 
