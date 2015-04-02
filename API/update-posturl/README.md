@@ -11,9 +11,12 @@ message - the sms message
 All is returned in Json
 
 API url : http://www.smspi.co.uk/api/update-posturl/
+```
 Required Paramters: 
 hash
 posturl
+
+```
 
 URL needs to start http or https otherwise it will fail to update.
 
