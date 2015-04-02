@@ -8,14 +8,18 @@ if you do not wish for json results please use the following url http://www.smsp
 All is returned in Json
 
 API url : http://www.smspi.co.uk/api/send/
+
+```
 Required Paramters: 
 hash
 to
 message
 
+
+
 Optional Parameters:
 flash
-
+```
 POST or GET to the URL passing your SMS pi hash will return:
 
 if no flash is set
