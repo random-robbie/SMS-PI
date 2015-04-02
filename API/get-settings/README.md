@@ -11,8 +11,10 @@ Keyword - When you text back to SMSPI you need to put this keyword in so that th
 All is returned in Json
 
 API url : http://www.smspi.co.uk/api/get-settings/
-Required Paramters: hash
-
+```
+Required Paramters: 
+hash
+```
 POST or GET to the URL passing your SMS pi hash will return:
 
 ```
