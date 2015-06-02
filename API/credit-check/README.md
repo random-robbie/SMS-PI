@@ -12,5 +12,5 @@ Required Paramters: hash
 POST or GET to the URL passing your SMS pi hash will return:
 
 ```
-[{"error":false,"credits":"997"}]
+ [{"error":false,"free credits":"99999","paid credits":"3"}]
 ```
