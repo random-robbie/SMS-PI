@@ -7,31 +7,26 @@ if you do not wish for json results please use the following url http://www.smsp
 
 All is returned in Json
 
-API url : http://www.smspi.co.uk/api/send/
+API url : http://www.smspi.co.uk/api/send-paid/
+
+hash = Your usal 
 
 ```
 Required Paramters: 
 hash
 to
 message
+sender
+test
 
 
-
-Optional Parameters:
-flash
 ```
 POST or GET to the URL passing your SMS pi hash will return:
 
-if no flash is set
-
-```
-[{"error":false,"to":"447771741041","Message ID":"447771741041234233","Message Type":"Normal","info":"Sent"}]
-```
-
-
-if flash is set
 
 
 ```
-[{"error":false,"to":"447771741041","Message ID":"447771741041234233","Message Type":"Flash","info":"Sent"}]
+[{"test_mode":false,"paid credits":"20","cost":"1","to":"447771741041","Message:":"test","sender:smspi","custom_id:2342423423423432324,"status:"Sent"}]
+```
+
 ```
