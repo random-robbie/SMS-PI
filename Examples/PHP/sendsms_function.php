@@ -6,7 +6,7 @@ $hash = ""; // Your smspi api hash
 $flash = "";  // yes or no 
 
 
-```
+
 function sendsms($to,$message,$hash,$flash)
 {
 
@@ -42,4 +42,4 @@ if ($decode[0]->error == false)
 }
 
  sendsms($to,$message,$hash,$flash);
-```
+
