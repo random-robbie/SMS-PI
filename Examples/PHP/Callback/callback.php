@@ -18,11 +18,12 @@ $message = "Please call ".$name." Back On ".$number2." Sent Via ".$webpage."";
 
 
 //set POST variables
-$url = 'http://www.smspi.co.uk/api/';
+$url = 'http://www.smspi.co.uk/api/send';
 $fields = array(
 						'to' => $number,
 						'message' => $message,
-						'hash' =>  $hash
+						'hash' =>  $hash,
+						'flash' => "no"
 
 				);
 
