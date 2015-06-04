@@ -22,7 +22,7 @@ POST or GET to the URL passing your SMS pi hash will return:
 
 
 ```
-[{"test_mode":false,"paid credits":"20","cost":"1","to":"447771741041","Message:":"test","sender:smspi","custom_id:2342423423423432324,"status:"Sent"}]
+[{"error:"false,"test_mode":false,"paid credits":"20","cost":"1","to":"447771741041","Message:":"test","sender:smspi","custom_id:2342423423423432324,"status:"Sent"}]
 ```
 
 ```
