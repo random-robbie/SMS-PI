@@ -1,16 +1,16 @@
 SMS-PI
 ======
 
-Credit Check will return how many credits you have.
+get-group will return your group you have for bulk sms and all numbers in that group
 
 All is returned in Json
 
-API url : http://www.smspi.co.uk/api/credit-check/
+API url : http://www.smspi.co.uk/api/get-group/
 ```
-Required Paramters: hash
+Required Paramters: hash,group
 ```
 POST or GET to the URL passing your SMS pi hash will return:
 
 ```
- [{"error":false,"free":"99999","paid":"3"}]
+  [{"error":false,"numbers":["07777785896,07758965845,0774123698"]}]
 ```
