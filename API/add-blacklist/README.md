@@ -12,5 +12,5 @@ Required Paramters: hash,number
 POST or GET to the URL passing your SMS pi hash will return:
 
 ```
- [{"error":false,"free":"99999","paid":"3"}]
+ [{"error":false,"message":"07731111111 has been added to the blacklist"}]
 ```
