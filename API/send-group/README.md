@@ -3,15 +3,16 @@ SMS-PI
 
 Send - This is the API point to return the results in json.
 
-API url : http://www.smspi.co.uk/api/send-paid/
+API url : http://www.smspi.co.uk/api/send-group/
 
 Sender can only be 11 chars and has to be either numbers or letters
 Test Mode - Set as true or flase or 1 or 0
+group is the group name you have saved on the system
 
 ```
 Required Paramters: 
 hash
-to
+group
 message
 sender
 test
