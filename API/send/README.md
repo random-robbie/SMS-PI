@@ -3,7 +3,7 @@ SMS-PI
 
 Send - This is the API point to return the results in json.
 
-if you do not wish for json results please use the following url http://www.smspi.co.uk/api/
+if you do not wish for json results please use the following url http://www.smspi.co.uk/api/send/
 
 All is returned in Json
 
