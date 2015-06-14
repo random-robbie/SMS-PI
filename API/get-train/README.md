@@ -1,7 +1,9 @@
 SMS-PI
 ======
 
-Get train will return the time of the next train from your chosen station
+Get train will return the time of the next train from your chosen station.
+
+Note this only returns the next train not a full list of departures
 
 You will need to pass 2 variables one is 
 
