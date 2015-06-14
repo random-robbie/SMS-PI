@@ -1,22 +1,28 @@
 SMS-PI
 ======
 
-Get Settings will return your incoming settings for sms
+Get train will return the time of the next train from your chosen station
 
-SMS Reply - reply with a message when some one texts your keyword
-Email - Email's you the incoming SMS
-Post URL - will return the url you have set so when an incoming sms comes it it's then sent to the url provided
-Keyword - When you text back to SMSPI you need to put this keyword in so that the system knows the sms is for you.
+You will need to pass 2 variables one is 
+
+start  - This is the first station the train should be departing to.
+end - the end station it you want.
+
+Note due to the complex way this gets the details if there is a change over you will not see if it's on time but you may see a note from the local transport authority.
+
+Station codes can be downloaded from http://www.nationalrail.co.uk/static/documents/content/station_codes.csv
 
 All is returned in Json
 
-API url : http://www.smspi.co.uk/api/get-settings/
+API url : http://www.smspi.co.uk/api/get-train/
 ```
 Required Paramters: 
 hash
+start
+end
 ```
 POST or GET to the URL passing your SMS pi hash will return:
 
 ```
-[{"smsreply":"thisisa test","email":null,"posturl":"http:\/\/www.smspi.co.uk\/test\/","keyword":"ADSA2"}]
+[{"error":false,"message":["09:33","On time"]}]
 ```
