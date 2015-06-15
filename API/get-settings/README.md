@@ -18,5 +18,5 @@ hash
 POST or GET to the URL passing your SMS pi hash will return:
 
 ```
-[{"smsreply":"thisisa test","email":null,"posturl":"http:\/\/www.smspi.co.uk\/test\/","keyword":"ADSA2"}]
+[{"mobile":null,"smsreply":"thisisa test","email":null,"posturl":"http:\/\/www.smspi.co.uk\/test\/","keyword":"ADSA2"}]
 ```
