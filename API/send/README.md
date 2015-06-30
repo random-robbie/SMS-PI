@@ -19,7 +19,7 @@ message
 
 Optional Parameters:
 flash
-report (to set this set the value to "Yes"
+report (to set this set the value to "Yes")
 ```
 POST or GET to the URL passing your SMS pi hash will return:
 
