@@ -19,6 +19,7 @@ message
 
 Optional Parameters:
 flash
+report (to set this set the value to "Yes"
 ```
 POST or GET to the URL passing your SMS pi hash will return:
 
@@ -34,4 +35,11 @@ if flash is set
 
 ```
 [{"error":false,"to":"447771741041","Message ID":"447771741041234233","Message Type":"Flash","info":"Sent"}]
+```
+
+
+if report is set to yes
+
+```
+[{"error":false,"to":"447771741041","Message ID":"447771741041234233","Message Type":"Report","info":"Sent"}]
 ```
