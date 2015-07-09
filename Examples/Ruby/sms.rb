@@ -6,7 +6,7 @@ messsage = "Your message"
 numbers = "447123456789"
 
  
-requested_url = 'http://www.smspi.co.uk/api/' +
+requested_url = 'http://www.smspi.co.uk/api/send/' +
 "&hash=" + hash + 
 "&to=" + numbers + "&message=" + URI.escape(message)
              
