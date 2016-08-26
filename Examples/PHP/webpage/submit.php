@@ -4,15 +4,17 @@
 
 $message = $_POST['message']; 
 $number = $_POST['number'];
-$flash = $_POST['flash'];
+
 $hash ="YOUR HASH";
 
 if (!isset($flash) || empty($flash))
 {
     $flash = "no";
+} else {
+    $flash = $_POST['flash'];
 }
 //set POST variables 
-$url = 'http://www.smspi.co.uk/api/'; 
+$url = 'http://www.smspi.co.uk/api/send/'; 
 $fields = array('to' => ($number), 'message' => ($message), 'hash' => ($hash), 'flash' => ($flash) ); 
 //open connection 
 $ch = curl_init(); 
