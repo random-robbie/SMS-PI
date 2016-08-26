@@ -1,6 +1,6 @@
 <?php
 include ('config.php');
-$number = $_REQUEST['number'];
+$number = $_REQUEST['from'];
 
 function insert2db ($url)
 {
