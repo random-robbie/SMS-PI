@@ -6,14 +6,14 @@ With out flash
 ----
 
 ```
-curl --data "to=077123456789&message=YOUR MESSAGE&hash=ENTERYOURHASH" http://www.smspi.co.uk/api/send/
+curl --data "to=077123456789&message=YOUR MESSAGE&hash=ENTERYOURHASH" https://www.smspi.co.uk/api/send/
 
 ```
 
 with flash
 ---
 ```
-curl --data "to=077123456789&message=YOUR MESSAGE&hash=ENTERYOURHASH&flash=yes" http://www.smspi.co.uk/api/send/
+curl --data "to=077123456789&message=YOUR MESSAGE&hash=ENTERYOURHASH&flash=yes" https://www.smspi.co.uk/api/send/
 
 ```
 
