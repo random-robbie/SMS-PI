@@ -12,5 +12,5 @@ paramsGet = {"report":"no","to":"YOURNUMBER","message":"YOURMESSAGE","hash":"YOU
 headers = {"User-Agent":"Mozilla/5.0 (Windows NT 10.0; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0","Connection":"close","Accept-Language":"en-GB,en;q=0.5","Accept-Encoding":"gzip, deflate","Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"}
 response = session.get("https://www.smspi.co.uk/api/send/", params=paramsGet, headers=headers)
 
-print "Status code:", response.status_code
-print "Response body:", response.content
+print ("Status code:", response.status_code)
+print ("Response body:", response.content)
